@@ -5,10 +5,8 @@ import App from "./components/App/App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import store from "./store";
-import createRoutes from "./routes";
 
 const rootElement = document.getElementById("root");
-// const routes = createRoutes();
 
 ReactDOM.render(
   <Provider store={store}>

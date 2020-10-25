@@ -1,19 +1,26 @@
 import "./App.css";
-import LeftPanel from "../LeftPanel/LeftPanel";
+import { Route, BrowserRouter, Switch } from "react-router-dom";
 
-function App(props) {
+import Overview from "../Overview/Overview";
+import Sales from "../Sales/Sales";
+import Container from "../Container/Container";
+
+function App() {
   return (
-    <div className="appContainer">
-      <div className="leftPanelContainer">
-        <p>app.js-left panel container</p>
-        <LeftPanel />
-      </div>
-
-      <div className="rightContentContainer">
-        <p>app.js-right content container</p>
-        {/* <props.RightContent /> */}
-      </div>
-      {/* */}
+    <div>
+      <BrowserRouter>
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={(...props) => <Container RightContent={Overview} />}
+          />
+          <Route
+            path="/sales"
+            render={(...props) => <Container RightContent={Sales} />}
+          />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
