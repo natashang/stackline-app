@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.appContainer {
+  display: flex;
+}
+
+.leftPanelContainer {
+  flex: 1;
+  border: 1px solid blue;
+}
+
+.rightContentContainer {
+  flex: 2;
+  margin-left: 30px;
+  border: 1px solid red;
+}
