@@ -1,25 +1,38 @@
 import React from "react";
 import { connect } from "react-redux";
-
 import LeftPanel from "../LeftPanel/LeftPanel";
 import "./Container.css";
 
 const Container = (props) => {
+  const renderComponents = () => {
+    return (
+      <>
+        <div className="leftPanelContainer">
+          <LeftPanel />
+        </div>
+
+        <div className="rightContentContainer">
+          <props.RightContent />
+        </div>
+      </>
+    );
+  };
+
   return (
     <div className="appContainer">
-      <div className="leftPanelContainer">
-        <LeftPanel />
-      </div>
-
-      <div className="rightContentContainer">
-        <props.RightContent />
-      </div>
+      {props.data !== null && props.loading === false
+        ? renderComponents()
+        : null}
     </div>
   );
 };
 
 const mapStateToProps = (state) => {
-  return {};
+  const { loadingReducer } = state;
+  return {
+    data: loadingReducer.data,
+    loading: loadingReducer.loading,
+  };
 };
 
 const mapDispatchToProps = {};
