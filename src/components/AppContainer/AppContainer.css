@@ -1,0 +1,18 @@
+.appContainer {
+  display: flex;
+  background-color: rgb(223, 217, 217);
+}
+
+.leftPanelContainer {
+  flex: 1;
+  padding: 10px;
+  background-color: white;
+  margin: 15px;
+}
+
+.rightContentContainer {
+  flex: 2;
+  margin: 15px;
+  padding: 10px;
+  background-color: white;
+}
