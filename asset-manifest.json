@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/stackline-app/static/css/main.4211aab7.chunk.css",
+    "main.js": "/stackline-app/static/js/main.847b692e.chunk.js",
+    "main.js.map": "/stackline-app/static/js/main.847b692e.chunk.js.map",
+    "runtime-main.js": "/stackline-app/static/js/runtime-main.f63b1d3b.js",
+    "runtime-main.js.map": "/stackline-app/static/js/runtime-main.f63b1d3b.js.map",
+    "static/css/2.454a27c8.chunk.css": "/stackline-app/static/css/2.454a27c8.chunk.css",
+    "static/js/2.d6a039ca.chunk.js": "/stackline-app/static/js/2.d6a039ca.chunk.js",
+    "static/js/2.d6a039ca.chunk.js.map": "/stackline-app/static/js/2.d6a039ca.chunk.js.map",
+    "static/js/3.55fb5923.chunk.js": "/stackline-app/static/js/3.55fb5923.chunk.js",
+    "static/js/3.55fb5923.chunk.js.map": "/stackline-app/static/js/3.55fb5923.chunk.js.map",
+    "index.html": "/stackline-app/index.html",
+    "static/css/2.454a27c8.chunk.css.map": "/stackline-app/static/css/2.454a27c8.chunk.css.map",
+    "static/css/main.4211aab7.chunk.css.map": "/stackline-app/static/css/main.4211aab7.chunk.css.map",
+    "static/js/2.d6a039ca.chunk.js.LICENSE.txt": "/stackline-app/static/js/2.d6a039ca.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f63b1d3b.js",
+    "static/css/2.454a27c8.chunk.css",
+    "static/js/2.d6a039ca.chunk.js",
+    "static/css/main.4211aab7.chunk.css",
+    "static/js/main.847b692e.chunk.js"
+  ]
+}
