@@ -3,6 +3,7 @@ import {
   FETCH_ERROR,
   FETCH_START,
   LOAD_DATA,
+  SET_DATA_MODIFIED_FLAG,
 } from "./actionTypes";
 import { apiFetchData } from "../services/apiFetchData";
 
@@ -43,5 +44,11 @@ export const fetchData = () => {
     } catch (error) {
       dispatch(fetchError(error));
     }
+  };
+};
+
+export const setDataModifiedFlag = () => {
+  return {
+    type: SET_DATA_MODIFIED_FLAG,
   };
 };

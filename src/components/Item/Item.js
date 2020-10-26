@@ -3,13 +3,13 @@ import "./Item.css";
 import { connect } from "react-redux";
 
 const Item = (props) => {
-  const renderImage = () => {
+  const renderInfo = () => {
     const { image, title, description } = props;
     return (
-      <div>
+      <div className="itemInfo">
         <img src={image} alt={title} className="itemImage" title={title} />
         <h2>{title}</h2>
-        <p>{description}</p>
+        <p className="itemDescription">{description}</p>
       </div>
     );
   };
@@ -18,15 +18,17 @@ const Item = (props) => {
     const { tags } = props;
     if (tags !== undefined) {
       return (
-        <ul className="tagsContainer">
-          {tags.map((tag, i) => {
-            return (
-              <li className="tag" key={i}>
-                {tag}
-              </li>
-            );
-          })}
-        </ul>
+        <div className="tagsContainer">
+          <ul className="tagsList">
+            {tags.map((tag, i) => {
+              return (
+                <li className="tag" key={i}>
+                  {tag}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       );
     }
   };
@@ -40,11 +42,11 @@ const Item = (props) => {
   };
 
   return (
-    <div>
-      {renderImage()}
+    <>
+      {renderInfo()}
       {renderHr()}
       {renderTags()}
-    </div>
+    </>
   );
 };
 

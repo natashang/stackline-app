@@ -1,9 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
 import LeftPanel from "../LeftPanel/LeftPanel";
-import "./Container.css";
+import "./AppContainer.css";
 
-const Container = (props) => {
+const AppContainer = (props) => {
   const renderComponents = () => {
     return (
       <>
@@ -36,4 +36,4 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = {};
-export default connect(mapStateToProps, mapDispatchToProps)(Container);
+export default connect(mapStateToProps, mapDispatchToProps)(AppContainer);

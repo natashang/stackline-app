@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import Item from "../Item/Item";
-import Navigator from "../Navigator/Navigator";
+import Links from "../Links/Links";
 import "./LeftPanel.css";
 
 const LeftPanel = () => {
@@ -17,7 +17,7 @@ const LeftPanel = () => {
     <div>
       <Item />
       {renderHr()}
-      <Navigator />
+      <Links />
     </div>
   );
 };

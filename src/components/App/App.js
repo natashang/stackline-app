@@ -1,9 +1,9 @@
 import "./App.css";
-import { Route, BrowserRouter, Switch } from "react-router-dom";
+import { Route, HashRouter, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 import Overview from "../Overview/Overview";
 import Sales from "../Sales/Sales";
-import Container from "../Container/Container";
+import AppContainer from "../AppContainer/AppContainer";
 import { useEffect } from "react";
 import { fetchData } from "../../actions/index";
 
@@ -13,21 +13,21 @@ function App(props) {
   });
 
   return (
-    <div>
-      <BrowserRouter>
+    <>
+      <HashRouter basename="/">
         <Switch>
           <Route
             exact
             path="/"
-            render={(...props) => <Container RightContent={Overview} />}
+            render={(...props) => <AppContainer RightContent={Sales} />}
           />
           <Route
-            path="/sales"
-            render={(...props) => <Container RightContent={Sales} />}
+            path="/overview"
+            render={(...props) => <AppContainer RightContent={Overview} />}
           />
         </Switch>
-      </BrowserRouter>
-    </div>
+      </HashRouter>
+    </>
   );
 }
 

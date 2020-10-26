@@ -3,11 +3,13 @@ import {
   FETCH_ERROR,
   FETCH_START,
   LOAD_DATA,
+  SET_DATA_MODIFIED_FLAG,
 } from "../actions/actionTypes";
 
 const initialState = {
   loading: false,
   error: null,
+  dataModified: false,
   data: {},
 };
 
@@ -37,6 +39,13 @@ const loadingReducer = (state = initialState, action) => {
         ...state,
         data: action.payload,
         loading: true,
+      };
+
+    case SET_DATA_MODIFIED_FLAG:
+      return {
+        ...state,
+        dataModified: true,
+        data: action.payload,
       };
 
     default:
