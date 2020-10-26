@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+
 import Navigator from "../Navigator/Navigator";
 import image from "../../logo.svg";
 import "./LeftPanel.css";
@@ -56,4 +58,9 @@ const LeftPanel = () => {
   );
 };
 
-export default LeftPanel;
+const mapStateToProps = (state) => {
+  return {};
+};
+
+const mapDispatchToProps = {};
+export default connect(mapStateToProps, mapDispatchToProps)(LeftPanel);

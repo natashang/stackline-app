@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+
 import LeftPanel from "../LeftPanel/LeftPanel";
 import "./Container.css";
 
@@ -16,4 +18,9 @@ const Container = (props) => {
   );
 };
 
-export default Container;
+const mapStateToProps = (state) => {
+  return {};
+};
+
+const mapDispatchToProps = {};
+export default connect(mapStateToProps, mapDispatchToProps)(Container);
